@@ -17,7 +17,7 @@ export const token = checkValue(
 );
 
 export const hookSecret = process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET;
-export const mode = process.env.NODE_ENV;
+export const mode = process.env.NEXT_PUBLIC_NODE_ENV;
 
 export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2023-07-21";
