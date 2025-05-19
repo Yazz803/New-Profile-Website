@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import Giscus from "@giscus/react";
-import { giscusRepoId, giscusCategoryId } from "@/lib/env.api";
+import { giscusRepoId, giscusCategoryId, giscusRepo } from "@/lib/env.api";
 
 export default function Comments() {
   const theme = useTheme();
@@ -10,15 +10,15 @@ export default function Comments() {
     theme.theme === "light"
       ? "light"
       : theme.theme === "dark"
-      ? "transparent_dark"
-      : "dark";
+        ? "transparent_dark"
+        : "dark";
 
   return (
     <Giscus
       id="comments"
-      repo="evavic44/victoreke.com"
+      repo={giscusRepo as "${string}/${string}"}
       repoId={giscusRepoId}
-      category="Announcements"
+      category="General"
       categoryId={giscusCategoryId}
       mapping="title"
       term="Welcome to @giscus/react component!"
