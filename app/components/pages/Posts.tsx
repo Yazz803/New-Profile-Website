@@ -16,8 +16,9 @@ const fallbackImage: string =
 export default async function Posts() {
   const posts: PostType[] = await sanityFetch({
     query: postsQuery,
-    tags: ["Post"],
+    tags: ["post"],
   });
+  console.log(posts);
 
   return (
     <section>
