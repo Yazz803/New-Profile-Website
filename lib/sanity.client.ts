@@ -6,7 +6,8 @@ const config: ClientConfig = {
   projectId,
   dataset,
   apiVersion,
-  useCdn: mode === "development" ? true : false,
+  // useCdn: mode === "development" ? true : false,
+  useCdn: true,
   ignoreBrowserTokenWarning: true,
   token,
   perspective: "published",
@@ -24,7 +25,8 @@ export async function sanityFetch<QueryResponse>({
   tags: string[];
 }): Promise<QueryResponse> {
   return client.fetch<QueryResponse>(query, qParams, {
-    cache: mode === "development" ? "no-store" : "force-cache",
+    // cache: mode === "development" ? "no-store" : "force-cache",
+    cache: "no-store",
     next: { tags },
   });
 }
