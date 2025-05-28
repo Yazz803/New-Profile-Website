@@ -9,6 +9,7 @@ import Footer from "./components/global/Footer";
 import { Providers } from "./providers";
 import { constant_data } from "@/constants";
 import NextTopLoader from "nextjs-toploader";
+import Layout from "./components/global/Layout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,9 +73,11 @@ export default function RootLayout({
         />
 
         <Providers>
-          <Navbar />
-          {children}
-          <Footer />
+          <Layout>
+            <Navbar />
+            {children}
+            <Footer />
+          </Layout>
         </Providers>
       </body>
       <Script
