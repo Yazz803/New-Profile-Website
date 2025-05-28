@@ -13,6 +13,9 @@ module.exports = {
       { hostname: "res.cloudinary.com" },
       { hostname: "www.google.com" },
       { hostname: "images.unsplash.com" },
+      { hostname: "localhost" },
+      { hostname: "yazidakbar.my.id" },
+      { hostname: "profile.yazidakbar.my.id" },
     ],
   },
 };

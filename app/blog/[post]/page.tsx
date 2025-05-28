@@ -18,6 +18,7 @@ import { HiCalendar, HiChat } from "react-icons/hi";
 import { sanityFetch } from "@/lib/sanity.client";
 import { readTime } from "@/app/utils/readTime";
 import PageHeading from "@/app/components/shared/PageHeading";
+import { constant_data } from "@/constants";
 
 type Props = {
   params: {
@@ -43,19 +44,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${post.title}`,
-    metadataBase: new URL(`https://victoreke.com/blog/${post.slug}`),
+    metadataBase: new URL(`${constant_data.base_url_fe}/blog/${post.slug}`),
     description: post.description,
     publisher: post.author.name,
     keywords: post.tags,
     alternates: {
       canonical:
-        post.canonicalLink || `https://victoreke.com/blog/${post.slug}`,
+        post.canonicalLink || `${constant_data.base_url_fe}/blog/${post.slug}`,
     },
     openGraph: {
       images:
         urlFor(post.coverImage?.image).width(1200).height(630).url() ||
         fallbackImage,
-      url: `https://victoreke.com/blog/${post.slug}`,
+      url: `${constant_data.base_url_fe}/blog/${post.slug}`,
       title: post.title,
       description: post.description,
       type: "article",

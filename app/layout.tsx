@@ -7,6 +7,8 @@ import { gitlabmono } from "./assets/font/font";
 import Navbar from "./components/global/Navbar";
 import Footer from "./components/global/Footer";
 import { Providers } from "./providers";
+import { constant_data } from "@/constants";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,10 +17,10 @@ const inter = Inter({
 });
 
 const options = {
-  title: "Victor Eke | Software Developer",
+  title: "Muhammad Yazid Akbar | Software Developer",
   description:
-    "Victor Eke is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
-  url: "https://victoreke.com",
+    "Muhammad Yazid Akbar is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
+  url: constant_data.base_url_fe,
   ogImage:
     "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
 };
@@ -54,6 +56,21 @@ export default function RootLayout({
       <body
         className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
       >
+        <NextTopLoader
+          color="#0cce6b"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={5}
+          crawl={true}
+          easing="ease"
+          speed={200}
+          shadow="0 0 10px #0cce6b,0 0 5px #0cce6b"
+          template={`<div class="bar" role="bar"><div class="peg"></div></div> 
+          <div class="spinner" role="spinner"><div class="spinner-icon"></div></div>`}
+          zIndex={1600}
+          showAtBottom={false}
+        />
+
         <Providers>
           <Navbar />
           {children}

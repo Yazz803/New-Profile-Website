@@ -8,6 +8,7 @@ import { Slide } from "../../animation/Slide";
 import { urlFor } from "@/lib/sanity.image";
 import { sanityFetch } from "@/lib/sanity.client";
 import { BiLinkExternal, BiLogoGithub } from "react-icons/bi";
+import { constant_data } from "@/constants";
 
 type Props = {
   params: {
@@ -29,13 +30,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${project.name} | Project`,
-    metadataBase: new URL(`https://victoreke.com/projects/${project.slug}`),
+    metadataBase: new URL(
+      `${constant_data.base_url_fe}/projects/${project.slug}`
+    ),
     description: project.tagline,
     openGraph: {
       images: project.coverImage
         ? urlFor(project.coverImage.image).width(1200).height(630).url()
         : fallbackImage,
-      url: `https://victoreke.com/projects/${project.slug}`,
+      url: `${constant_data.base_url_fe}/projects/${project.slug}`,
       title: project.name,
       description: project.tagline,
     },

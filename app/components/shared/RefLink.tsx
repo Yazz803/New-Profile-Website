@@ -14,12 +14,7 @@ export default function RefLink({
   target?: HTMLAttributeAnchorTarget;
 }) {
   return (
-    <Link
-      href={href + "?ref=victoreke.com"}
-      rel="noopener"
-      target={target}
-      className={className}
-    >
+    <Link href={href} target={target} className={className}>
       {children}
     </Link>
   );

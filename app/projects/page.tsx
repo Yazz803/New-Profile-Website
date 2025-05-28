@@ -7,15 +7,16 @@ import EmptyState from "../components/shared/EmptyState";
 import { Slide } from "../animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
 import PageHeading from "../components/shared/PageHeading";
+import { constant_data } from "@/constants";
 
 export const metadata: Metadata = {
-  title: "Project | Victor Eke",
-  metadataBase: new URL("https://victoreke.com/projects"),
-  description: "Explore projects built by Victor Eke",
+  title: "Project | Muhammad Yazid Akbar",
+  metadataBase: new URL(`${constant_data.base_url_fe}/projects`),
+  description: "Explore projects built by Muhammad Yazid Akbar",
   openGraph: {
-    title: "Projects | Victor Eke",
-    url: "https://victoreke.com/projects",
-    description: "Explore projects built by Victor Eke",
+    title: "Projects | Muhammad Yazid Akbar",
+    url: `${constant_data.base_url_fe}/projects`,
+    description: "Explore projects built by Muhammad Yazid Akbar",
     images:
       "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png",
   },

@@ -75,8 +75,8 @@ export default function Footer() {
             </a> */}
 
             <small className="text-zinc-500">
-              Copyright &copy; Victor Eke {new Date().getFullYear()} All rights
-              Reserved
+              Copyright &copy; Muhammad Yazid Akbar {new Date().getFullYear()}{" "}
+              All rights Reserved
             </small>
           </div>
         </div>

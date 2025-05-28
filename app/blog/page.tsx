@@ -4,15 +4,16 @@ import Posts from "../components/pages/Posts";
 import Social from "../components/shared/Social";
 import { Slide } from "../animation/Slide";
 import PageHeading from "@/app/components/shared/PageHeading";
+import { constant_data } from "@/constants";
 
 export const metadata: Metadata = {
-  title: "Blog | Victor Eke",
-  metadataBase: new URL("https://victoreke.com/blog"),
-  description: "Read latest stories from Victor Eke's Blog",
+  title: "Blog | Muhammad Yazid Akbar",
+  metadataBase: new URL(`${constant_data.base_url_fe}/blog`),
+  description: "Read latest stories from Muhammad Yazid Akbar's Blog",
   openGraph: {
-    title: "Blog | Victor Eke",
-    url: "https://victoreke.com/blog",
-    description: "Read latest stories from Victor Eke's Blog",
+    title: "Blog | Muhammad Yazid Akbar",
+    url: `${constant_data.base_url_fe}/blog`,
+    description: "Read latest stories from Muhammad Yazid Akbar's Blog",
     images:
       "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png",
   },
