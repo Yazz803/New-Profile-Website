@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu";
 export default function Navbar() {
   const data = [
     {
-      title: "Abouts",
+      title: "About Me",
       href: "/about",
     },
     {
