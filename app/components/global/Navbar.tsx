@@ -12,7 +12,7 @@ export default function Navbar() {
       href: "/about",
     },
     {
-      title: "Projects",
+      title: "My Projects",
       href: "/projects",
     },
     {
