@@ -85,6 +85,7 @@ export default function RootLayout({
         src="https://umami.yazidakbar.my.id/script.js"
         data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
       />
+      <Script defer src="https://tianji.yazidakbar.my.id/tracker.js" data-website-id={process.env.NEXT_PUBLIC_TIANJI_WEBSITE_ID} />
     </html>
   );
 }
