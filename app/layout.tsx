@@ -80,11 +80,8 @@ export default function RootLayout({
           </Layout>
         </Providers>
       </body>
-      <Script
-        defer
-        src="https://umami.yazidakbar.my.id/script.js"
-        data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-      />
+      <Script defer src="https://umami.yazidakbar.my.id/script.js" data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID} />
+      <Script defer src="https://umami.yazidakbar.my.id/recorder.js" data-website-id="5431dd76-5cbd-48c2-b6ac-29b498acf224" />
       <Script defer src="https://tianji.yazidakbar.my.id/tracker.js" data-website-id={process.env.NEXT_PUBLIC_TIANJI_WEBSITE_ID} />
     </html>
   );
