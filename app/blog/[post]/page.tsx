@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       type: "article",
-      siteName: "victoreke.com",
+      siteName: constant_data.base_url_fe,
       authors: post.author.name,
       tags: post.tags,
       publishedTime: post._createdAt,
