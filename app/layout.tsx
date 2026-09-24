@@ -20,10 +20,9 @@ const inter = Inter({
 const options = {
   title: "Muhammad Yazid Akbar | Software Developer",
   description:
-    "Muhammad Yazid Akbar is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
+    "Muhammad Yazid Akbar is a Fullstack and Mobile Developer to create and develop websites and mobile applications",
   url: constant_data.base_url_fe,
-  ogImage:
-    "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
+  ogImage: `${constant_data.base_url_fe}/preview.jpeg`,
 };
 
 export const metadata: Metadata = {
